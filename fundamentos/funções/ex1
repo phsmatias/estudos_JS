@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01</title>
+</head>
+
+<body>
+    <script>
+        /*ENUNCIADO: Para um grupo de valores reais, determinar o valor do desvio padrão destes valores em relação a média dos valores. O desvio padrão de um grupo de valores pode ser obtido por: 
+                               n          _
+            Dp = raizQuadrada((Σi=1 (Xi - X)^2)/n)
+        
+        */
+
+        let n = parseInt(prompt('Informe a quantidade de elementos do conjunto'), 10);
+        const elementos = []
+
+        for (let i = 0; i < n; i++) {
+            var num = parseInt(prompt(`Digite o ${i + 1}º elemento:`), 10);
+            elementos.push(num);
+        }
+
+        let calcularMedia = (array) => {
+            let cont = 0;
+            let soma = 0;
+            for (let i of array) {
+                soma += i;
+                ++cont;
+            }
+            return (soma / cont).toFixed(0);
+        }
+
+        const media = calcularMedia(elementos);
+
+        let quadradoDiferenca = (array, med) => {
+            let diferenca = []
+            for (var i of array) {
+                diferenca.push(i - med);
+            }
+            return diferenca.map(elemento => elemento ** 2);
+        }
+
+        const diferenca = quadradoDiferenca(elementos, media);
+
+        let desvioPadrao = (array, qtd) => {
+            let soma = 0;
+            for(var i of array){
+                soma += i;
+            }
+            return ((soma/qtd)**(1/2)).toFixed(0);
+        }
+
+        console.log(`Valor do desvio padrão: ${desvioPadrao(diferenca, diferenca.length)}`);
+    </script>
+</body>
+
+</html>
