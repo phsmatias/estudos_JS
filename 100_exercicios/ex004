@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 004</title>
+</head>
+<body>
+    <script>
+        //ENUNCIADO: Dado os três lados de um triângulo determinar o perímetro do mesmo.
+        var perimeter = 0;
+
+        for(var i=0; i<3; i++){
+            var side = parseFloat(prompt(`Digite a medida do lado ${i+1}:`), 10);
+            perimeter += side;
+        }
+        console.log(`O perimetro desse triângulo é de ${perimeter}.`);
+    </script>
+</body>
+</html>
