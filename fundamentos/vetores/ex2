@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 02</title>
+</head>
+
+<body>
+    <script>
+        /*ENUNCIADO: Desenvolva um algoritmo que ofereça ao usuário as seguintes opções
+
+            1. Inserir números inteiros em um vetor de até 10 posições. Os números devem ser inseridos de modo que o vetor nunca fique desordenado (em nenhum momento). Ao se tentar inserir um número em um vetor cheio o programa deve acusar que não será possível realizar a inserção. Após a inserção, o algoritmo deve imprimir a quantidade de elementos do vetor e os respectivos elementos.
+
+            2. Excluir um elemento do vetor a partir do seu valor. O usuário deverá entrar com o número que deseja excluir do vetor e o mesmo deverá ser retirado. Os demais elementos que se localizam após o elemento excluído devem ser realocados para suas novas posições. O algoritmo deve informar quando não existirem mais elementos para excluir.
+
+            3. Imprimir na tela os elementos do vetor em ordem CRESCENTE
+
+            4. Imprimir na tela os elementos do vetor em ordem DECRESCENTE
+
+            5. Sair do programa.
+
+        OBS: O objetivo do item 1 não é o de ordenar o vetor, mas sim de manter o vetor ordenado a cada inserção, sendo assim, o vetor nunca chegará a estar desordenado, ou seja, antes de inserir cada elemento, o algoritmo deve procurar em qual posição o mesmo deve ser inserido, e depois realizar a inserção exatamente naquela posição.
+        */
+
+        let numeros = [];
+        let numerosAuxiliar = []
+        var indice = 0;
+        while (true) {
+            var opc = prompt('Deseja inserir mais um número(I) ou sair(F):');
+            if (opc === 'I') {
+                if (numeros.length === 4) {
+                    alert('Não é possível inserir mais elementos, o vetor está cheio.');
+                    while (true) {
+                        var opc2 = parseInt(prompt('Você pode excluir um elemento (2)  - Imprimir na tela os elementos do vetor em ordem CRESCENTE (3) - Imprimir na tela os elementos do vetor em ordem DECRESCENTE (4) - Sair do programa (5). '), 10);
+                        if (opc2 === 2) {
+                            if (numeros.length === 0) {
+                                alert('Impossível, o array de numeros se encontra sem nenhum elemento.');
+                            } else {
+                                var valorExcluido = parseInt(prompt(`Informe qual valor deseja excluir do vetor ${numeros}:`));
+                                var indiceExclusao = numeros.indexOf(valorExcluido);
+                                numeros.splice(indiceExclusao, 1);
+                                alert(`vetor após a exclusão do elemento: ${numeros}`);
+                            }
+                        } else if (opc === 3) {
+                            alert(`Vetor em ordem CRESCENTE: ${numeros}`);
+                        } else if (opc === 4) {
+                            alert(`Vetor em ordem DECRESCENTE: ${numeros.reverse()}`);
+                        } else {
+                            break;
+                        }
+                    }
+                } else {
+                    var num = parseInt(prompt('Digite um número qualquer'), 10);
+                    numerosAuxiliar.push(num);
+                    numeros = numerosAuxiliar.sort((a, b) => {
+                        return a - b;
+                    });
+                }
+            } else {
+                break;
+            }
+        }
+        console.log(numeros);
+    </script>
+</body>
+
+</html>
