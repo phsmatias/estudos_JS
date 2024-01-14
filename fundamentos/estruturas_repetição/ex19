@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 19</title>
+</head>
+<body>
+    <p id="resposta"></p>
+    <script>
+        //ENUNCIADO: Elabore um algoritmo que leia um número de entrada que indicará a quantidade de números a serem lidos. Em seguida, leia n números (conforme o valor informado anteriormente) e, ao final imprima o maior, menor, e a média dos números digitados.
+
+        var n = parseInt(prompt('Informe a quantidade de números a serem lidos:'), 10);
+        var menor=0;
+        var maior=0;
+        var media=0;
+
+        for(var i=0; i<n; i++){
+            var numero = parseInt(prompt(`${i + 1}º número:`), 10);
+            
+            if(i === 0){
+                maior = numero;
+                menor = numero;
+            }else if(numero > maior){
+                maior = numero;
+            }
+            if(numero < menor){
+                menor = numero;
+            }
+            media += numero;
+        }
+
+        document.getElementById('resposta').innerHTML = `Entre os ${n} números lidos, o maior é ${maior}, o menor é ${menor} e média é ${(media/n).toFixed(2)}.`;
+    </script>
+</body>
+</html>
