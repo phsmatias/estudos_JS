@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang=pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+</head>
+<body>
+    <p id="resposta"></p>
+    <script>
+        /*Enunciado: Construir um algoritmo que leia dois números (BASE e EXPOENTE) e retorne como resultado a POTENCIA do cálculo da BASE elevado ao EXPOENTE
+
+        Ex: para BASE = 2 e EXPOENTE = 4, POTENCIA = 2^4 = 16 */
+
+        var base = parseInt(prompt('Informe a base do número:'), 10);
+        var expoente = parseInt(prompt('Informe o expoente do número:'), 10);
+        var potencia = 1;
+
+        for(var i = 0; i<expoente; i++){
+            potencia *= base;
+        }
+
+        document.getElementById('resposta').innerHTML = `Resultado: ${potencia}.`;
+    </script>
+</body>
+</html>
