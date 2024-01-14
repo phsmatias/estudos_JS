@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 12</title>
+</head>
+<body>
+    <p id="resposta"></p>
+    <script>
+        //Elabore um algoritmo que leia 30 números, e imprima quantos números maiores que 30 foram digitados
+
+        for(var i=0; i<30; i++){
+            var n = parseInt(prompt(`Número: ${i+1}`), 10);
+            if(n > 30){
+                document.getElementById('resposta').innerHTML += ` ${n} `;
+            }
+        }
+    </script>
+</body>
+</html>
