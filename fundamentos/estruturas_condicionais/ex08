@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 08</title>
+</head>
+<body>
+    <script>
+        var nome1 = prompt('Digite o nome da primeira pessoa:');
+        var peso1 = parseFloat(prompt('Digite o peso da primeira pessoa: '), 10);
+
+        var nome2 = prompt('Digite o nome da primeira pessoa:');
+        var peso2 = parseFloat(prompt('Digite o peso da segunda pessoa:'), 10);
+
+        if(peso1 > peso2){
+            alert(`A pessoa mais pesada é ${nome1} com ${peso1}Kg's.`);
+        }else{
+            alert(`A pessoa mais pesada é ${nome2} com ${peso2}Kg's.`);
+        }
+    </script>
+</body>
+</html>
