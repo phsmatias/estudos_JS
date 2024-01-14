@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 09</title>
+</head>
+<body>
+    <p id="resposta"></p>
+    <script>
+        //Enunciado: Construir um algoritmo que calcule o fatorial de um número
+
+        function fatorial (n){
+            if(n === 1){
+                return 1;
+            }else{
+                return n * (fatorial(n - 1));
+            }
+        }
+        document.getElementById('resposta').innerHTML = `Resposta: ${fatorial(5)}`;
+    </script>
+</body>
+</html>
