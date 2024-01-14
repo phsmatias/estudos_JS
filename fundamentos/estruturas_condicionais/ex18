@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 018</title>
+</head>
+<body>
+    <script>
+        var nome = prompt('Digite o nome do aluno:');
+        var n1 = parseFloat(prompt('Digite a nota do primeiro aluno:'), 10);
+        var n2 = parseFloat(prompt('Digite a nota do segundo aluno:'), 10);
+
+        if((n1 + n2)/2 >= 7.00){
+            alert(`ALUNO: ${nome}   1º NOTA: ${n1}   2º NOTA: ${n2}   MÉDIA: ${((n1 + n2)/2).toFixed(2)}   SITUAÇÃO: APROVADO`);
+        }else if((n1 + n2)/2 >= 3.00){
+            alert(`ALUNO: ${nome}   1º NOTA: ${n1}   2º NOTA: ${n2}   MÉDIA: ${((n1 + n2)/2).toFixed(2)}   SITUAÇÃO: PROVA FINAL`);
+        }else{
+            alert(`ALUNO: ${nome}   1º NOTA: ${n1}   2º NOTA: ${n2}   MÉDIA: ${((n1 + n2)/2).toFixed(2)}   SITUAÇÃO: REPROVADO`);
+        }
+    </script>
+</body>
+</html>
