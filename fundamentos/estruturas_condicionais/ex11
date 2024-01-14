@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 011</title>
+</head>
+<body>
+    <script>
+        var valorCompra = parseFloat(prompt('Informe o valor da compra:'), 10);
+
+        if(valorCompra < 20){
+            alert(`Um produto custando R$${valorCompra.toFixed(2)} deve ser vendido por R$${(valorCompra + (valorCompra * (45/100))).toFixed(2)} para que se obtenha um lucro de 45%`);
+        }else{
+            alert(`Um produto custando R$${valorCompra.toFixed(2)} deve ser vendido por R$${(valorCompra + (valorCompra * (30/100))).toFixed(2)} para que se obtenha um lucro de 30%`);
+        }
+    </script>
+</body>
+</html>
