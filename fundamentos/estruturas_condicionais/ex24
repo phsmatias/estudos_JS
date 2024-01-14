@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 025</title>
+</head>
+<body>
+    <script>
+        var ladoA = parseInt(prompt('Informe o comprimento do lado A:'), 10);
+        var ladoB = parseInt(prompt('Informe o comprimento do lado B:'), 10);
+        var ladoC = parseInt(prompt('Informe o comprimento do lado C:'), 10);
+
+        if((ladoA < ladoB + ladoC) || (ladoB < ladoA + ladoC) || (ladoC < ladoA + ladoB)){
+            if(ladoA === ladoB && ladoA == ladoC){
+                alert('Esses comprimentos formam um triângulo equilátero!');
+            }else if(ladoA === ladoB || ladoA === ladoC || ladoB === ladoC){
+                alert('Esses comprimentos formam um triângulo isósceles!');
+            }else{
+                alert('Esses comprimentos formam um triângulo escaleno!');
+            }
+        }else{
+            alert('Esses comprimentos não formam um triângulo!');
+        }
+    </script>
+</body>
+</html>
