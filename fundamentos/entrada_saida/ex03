@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+</head>
+<body>
+    <script>
+        var salarioMinimo = parseFloat(prompt('Qual o valor do sálario mínimo?'), 10);
+        var salario = parseFloat(prompt('Qual o valor do seu sálario?'), 10);
+
+        var res = salario / salarioMinimo;
+
+        alert(`Você recebe o equivalente a ${res.toFixed(2)} sálarios mínimos.`);
+    </script>
+</body>
+</html>
