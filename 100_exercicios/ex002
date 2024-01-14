@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 02</title>
+</head>
+<body>
+    <script>
+        //ENUNCIADO: Dado o tamanho do lado de um quadrado, calcular a área e o perímetro do mesmo.
+
+        let lado = parseFloat(prompt('Informe o comprimento do lado de um quadrado: '), 10);
+
+        alert(`Área do quadrado: ${lado**2}  Perímetro do quadrado: ${lado*4}`);
+    </script>
+</body>
+</html>
