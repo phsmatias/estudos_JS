@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 022</title>
+</head>
+<body>
+    <script>
+        var nome = prompt('Nome do hóspede:');
+        var tipoAp = prompt('Tipo de apartamento (A/B/C/D):').toUpperCase();
+        var diarias = parseInt(prompt('Número de diárias:'), 10);
+        var consumoInterno = parseFloat(prompt('Valor consumido internamento no hotel:'), 10);
+
+        function valorFinal(apartamento, qtdDiarias, consumo){
+            if(apartamento == 'A'){
+                return ((150 * qtdDiarias) + consumo) +  (((150 * qtdDiarias) + consumo) * 0.1)
+            }else if(apartamento == 'B'){
+                return ((150 * qtdDiarias) + consumo) +  (((100 * qtdDiarias) + consumo) * 0.1)
+            }else if(apartamento == 'C'){
+                return ((150 * qtdDiarias) + consumo) +  (((75 * qtdDiarias) + consumo) * 0.1)
+            }else{
+                return ((150 * qtdDiarias) + consumo) +  (((150 * qtdDiarias) + consumo) * 0.1)
+            }
+        }
+
+        function subTotal(apartamento, qtdDiarias, consumo){
+            if(apartamento == 'A'){
+                return ((150 * qtdDiarias) + consumo)
+            }else if(apartamento == 'B'){
+                return ((150 * qtdDiarias) + consumo)
+            }else if(apartamento == 'C'){
+                return ((150 * qtdDiarias) + consumo)
+            }else{
+                return ((150 * qtdDiarias) + consumo)
+            }
+        }
+
+        function day(tipo){
+            if(tipo == 'A'){
+                return 150
+            }else if(tipo == 'B'){
+                return 100
+            }else if(tipo == 'C'){
+                return 75
+            }else{
+                return 150
+            }
+        }
+
+        alert(`CLIENTE: ${nome}  CAREGORIA: ${tipoAp}  DIÁRIAS: ${diarias}  VALOR UNITÁRIO DA DIÁRIA: R$${day(tipoAp)}  CONSUMO INTERNO: R$${consumoInterno}  SUBTOTAL: R$${subTotal(tipoAp, diarias, consumoInterno)} TAXA DE SERVIÇO: R$${subTotal(tipoAp, diarias, consumoInterno) * 0.1} TOTAL GERAL: R$${valorFinal(tipoAp, diarias, consumoInterno)}`);
+    </script>
+</body>
+</html>
