@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+</head>
+<body>
+    <script>
+        var pesoGramas = parseInt(prompt('Informe seu peso em gramas:'), 10);
+        var pesoReajustado = pesoGramas + (pesoGramas * (12/100));
+        alert(`O seu novo peso reajustado em 12% é ${pesoReajustado}`);
+    </script>
+</body>
+</html>
