@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 07</title>
+</head>
+<body>
+    <script>
+        var a = parseInt(prompt('Digite o valor da variável A:'), 10);
+        var b = parseInt(prompt('Digite o valor da variável B:'), 10);
+
+        var c = a;
+        var a = b;
+        var b = c;
+
+        alert(`O valor de B:${b} e o valor de A:${a}`);
+    </script>
+</body>
+</html>
