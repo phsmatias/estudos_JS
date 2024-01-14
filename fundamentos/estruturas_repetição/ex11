@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        p{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="respostas">
+
+    </div>
+
+    <script>
+        /*Enunciado: Elabore um algoritmo que imprima a tabuada de um número que será informado pelo usuário.*/
+
+        var num = parseInt(prompt('Informe um número e veja sua tabuada:'), 10);
+
+        for(var i=1; i<=10; i++){
+            document.getElementById('respostas').innerHTML += ` <p>${num}x${i} = ${num * i}</p> `;
+        }
+    </script>
+</body>
+</html>
