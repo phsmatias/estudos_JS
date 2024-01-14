@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06</title>
+</head>
+<body>
+    <script>
+        var n1 = prompt('Digite o primeiro número de 5 dígitos:');
+        var n2 = prompt('Digite o segundo número de 5 dígitos:');
+
+        var valorFinal = "";
+
+        const digitos1 = [];
+        const digitos2 = []
+        var cont = 0;
+
+        for(var i in n1){
+            digitos1.push(n1[i]);
+            ++cont;
+        }
+
+        cont = 0;
+
+        for(var i in n2){
+            digitos2.push(n2[i]);
+            ++cont;
+        }
+
+        console.log(digitos1);
+        console.log(digitos2);
+
+        var j = 0;
+        var c = 0;
+        
+        const res = []
+
+        for(var i=0; i<10; i++){
+            if(i % 2 == 0){
+                res.push(digitos1[c]);
+                ++c
+            }else{
+                res.push(digitos2[j]);
+                ++j;
+            }
+        }
+
+        var valorFinal = "";
+
+        for(var i in res){
+            valorFinal += res[i];
+        }
+
+        console.log(res);
+        alert(valorFinal);
+    </script>
+</body>
+</html>
