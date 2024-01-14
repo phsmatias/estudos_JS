@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01</title>
+</head>
+
+<body>
+    <script>
+        /*ENUNCIADO: Desenvolva um algoritmo que solicite ao usuário a ordem de duas matrizes A e B (máximo 10x10) e seus respectivos elementos. Após a inserção dos elementos das matrizes A e B o programa deve oferecer ao usuário as seguintes opções:
+
+            1. mostrar as duas matrizes
+
+            2. multiplicar as duas matrizes e mostrar a matriz resultante. Caso a multiplicação das matrizes não seja possível o programa deve informar ao usuário o motivo da impossibilidade.
+
+            3. sair do programa.
+
+            obs: Os elementos da matriz devem ser do tipo inteiro ou do tipo real.
+        */
+
+        var ordemMatrizA = parseInt(prompt('Defina a ordem da Matriz Quadrada A:'), 10);
+        var ordemMatrizB = parseInt(prompt('Defina a ordem da Matriz Quadrada B:'), 10);
+
+        const matrizA = [];
+        const matrizB = [];
+        const matrizResultante = [];
+
+        for (var linha = 0; linha < ordemMatrizA; linha++) {
+            var numeros = [];
+            for (var coluna = 0; coluna < ordemMatrizA; coluna++) {
+                var num = parseInt(prompt(`Matriz A: Item da linha ${linha + 1} e coluna ${coluna + 1}:`), 10);
+                numeros.push(num);
+            }
+            matrizA.push(numeros);
+        }
+
+        for (var linha = 0; linha < ordemMatrizB; linha++) {
+            var numeros = [];
+            for (var coluna = 0; coluna < ordemMatrizB; coluna++) {
+                var num = parseInt(prompt(`Matriz B: Item da linha ${linha + 1} e coluna ${coluna + 1}:`), 10);
+                numeros.push(num);
+            }
+            matrizB.push(numeros);
+        }
+
+        var opc = parseInt(prompt('O que deseja fazer?   (1) mostrar as duas matrizes  (2) multiplicar as duas matrizes e mostrar a matriz resultante  (3) sair do programa: Digite 1, 2 ou 3'), 10);
+        var a = 0;
+        if (opc === 1) {
+            console.log('Matriz A');
+            for (var i in matrizA) {
+                console.log(matrizA[i]);
+            }
+            console.log('Matriz B')
+            for (var i in matrizB) {
+                console.log(matrizB[i]);
+            }
+        } else if (opc === 2) {
+            if (ordemMatrizA === ordemMatrizB) {
+                for (var i = 0; i < ordemMatrizA; i++) {
+                    matrizResultante.push([]);
+                    for(var i in matrizResultante){
+                        matrizResultante[i].push(0);
+                    }
+                }
+                for(var x=0; x<ordemMatrizA; x++){
+                    for(var y=0; y<ordemMatrizA; y++){
+                        for(var z=0; z<ordemMatrizA; z++){
+                            a = a + (matrizA[x][z] * matrizB[z][y]);  
+                            console.log(a);
+                        }
+                        matrizResultante[x][y] = a;
+                        a = 0;
+                    }
+                }
+                console.log('Matriz Resultante');
+                console.log(matrizResultante);
+            } else {
+                alert('Impossível realizar tal procedimento, as matrizes não cumprem a condição nescessária (número de colunas da matriz A ser igual ao número de linhas da matriz B).');
+            }
+        }else{
+            alert('Fim do programa!');
+        }
+    </script>
+</body>
+
+</html>
