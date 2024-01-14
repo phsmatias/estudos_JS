@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 001</title>
+</head>
+<body>
+    <script>
+        //ENUNCIADO: Dado o tamanho da base e da altura de um retângulo, calcular a sua área e o seu perímetro
+
+        let base = parseFloat(prompt('Informe o comprimento da base de um retângulo: '), 10);
+        let altura = parseFloat(prompt('Informe o comprimento da altura de desse mesmo retângulo'), 10);
+
+        alert(`Área do retângulo: ${base*altura}  Perímeto do retângulo: ${altura*2 + base*2}`);
+    </script>
+</body>
+</html>
