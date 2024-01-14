@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 024</title>
+</head>
+<body>
+    <script>
+        var n1 = parseInt(prompt('Digite o primerio valor: '), 10);
+        var n2 = parseInt(prompt('Digite o segundo valor: '), 10);
+        var n3 = parseInt(prompt('Digite o terceiro valor: '), 10);
+
+        var maior = n1;
+        var segundo = 0;
+        var terceiro = 0;
+
+        if(n2 > maior){
+            if(n1 > n3){
+                segundo = n1;
+                terceiro = n3;
+            }else{
+                segundo = n3;
+                terceiro = n1;
+            }
+            maior = n2;
+        }if( n3 > maior){
+            if(n1 > n2){
+                segundo = n1;
+                terceiro = n2;
+            }else{
+                segundo = n2;
+                terceiro = n1;
+            }
+            maior = n3;
+        }else{
+            if(n2 > n3){
+                segundo = n2;
+                terceiro = n3;
+            }else{
+                segundo = n3;
+                terceiro = n2;
+            }
+        }
+        
+        alert(`1º lugar: ${maior}  2º lugar: ${segundo}  3º lugar ${terceiro}.`);
+    </script>
