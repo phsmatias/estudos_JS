@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 008</title>
+</head>
+<body>
+    <script>
+        //ENUNCIADO:Dado que a fórmula para conversão de Fahrenheit para Celsius é C = 5/9 (F – 32), leu um valor de temperatura em Fahrenheit e exibi-lo em Celsius.
+
+        var temp = Number(prompt('Digite a temperatura em Fahrenheit e veja ela convertida para Celsius:'), 10);
+        var conversao = ((5/9) * (temp - 32));
+        console.log(`${temp}º Fahrenheit convertido para Celsius fica ${conversao.toFixed(2)}º`);
+    </script>
+</body>
+</html>
