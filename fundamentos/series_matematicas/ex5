@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06</title>
+</head>
+<body>
+    <p id="resposta"></p>
+    <script src="./jquery-3.7.1.js"></script>
+    <script>
+        /*ENUNCIADO: Desenvolva um algoritmo que calcule o valor de X que é dado por:
+        
+            Xn = n + (n-1)/2 + (n-2)/3 + ... + 1/n
+        */
+
+        var n = parseInt(prompt('Informe o valor de n:'), 10);
+        var res = 0;
+
+        for(var i=0; i<n; i++){
+            if(i === 0){
+                res += n
+            }else{
+                res += (n - i)/(i + 1);
+            }
+        }
+        document.getElementById('resposta').innerHTML = `Resposta: ${res.toFixed(2)}`;
+    </script>
+</body>
+</html>
