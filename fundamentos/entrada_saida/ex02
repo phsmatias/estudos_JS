@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exrcício 02</title>
+</head>
+<body>
+    <script>
+        var temp = parseInt(prompt('Informe a temperatura em graus Celsius: '), 10);
+        var conversao = ((temp * (9/5)) + 32);
+        alert(`${temp}º Celsius é equivalente a ${conversao}º em Fahrenheit.`);
+    </script>
+</body>
+</html>
