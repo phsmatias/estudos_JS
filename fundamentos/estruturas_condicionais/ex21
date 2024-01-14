@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 021</title>
+</head>
+<body>
+    <script>
+        var valorProduto = parseFloat(prompt('Informe o valor do produto a vista:'), 10);
+        var opcaoCompra = parseInt(prompt('Informe qual a sua opção de compra: 1 - A VISTA    2 - 2 PARCELAS    3 - 3 PARCELAS'), 10);
+
+        if(opcaoCompra === 1){
+            alert(`O valor final a vista é de R$${valorProduto.toFixed(2)}.`);
+        }else if(opcaoCompra === 2){
+            alert(`O valor final é de ${(valorProduto + (valorProduto * 0.1)).toFixed(2)} em duas parcelas iguais de R$${((valorProduto + (valorProduto * 0.1)) / 2).toFixed(2)}.`);
+        }else{
+            alert(`O valor final é de ${(valorProduto + (valorProduto * 0.2)).toFixed(2)} em três parcelas iguais de R$${((valorProduto + (valorProduto * 0.2)) / 3).toFixed(2)}.`);
+        }
+    </script>
+</body>
+</html>
