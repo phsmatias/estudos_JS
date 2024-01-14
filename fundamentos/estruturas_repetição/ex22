@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 22</title>
+</head>
+<body>
+    <div>
+        <p id="gostaram"></p>
+        <p id="nGostaram"></p>
+        <p id="masculinoN"></p>
+        <p id="maiorAceitacao"></p>
+    </div>
+    <script>
+        /*Uma determinada empresa fez uma pesquisa de mercado para saber se as pessoas gostaram ou não de um novo produto que foi lançado. Para cada pessoa entrevistada foram coletados os seguintes dados: Sexo(M ou F) e Resposta(Gostou ou Não Gostou). Sabendo-se que foram entrevistadas N pessoas, faça um programa que forneça:
+
+            >>Número de pessoas que gostaram do produto
+
+            >>Número de pessoas que não gostaram do produto
+
+            >>Porcentagem de pessoas do sexo masculino que não gostaram do produto
+
+            >>Informação dizendo em que sexo o produto teve uma melhor aceitação
+        */
+
+        var qtdEntrevistados = parseInt(prompt('Quantas pessoas foram entrevistadas?'), 10);
+
+        var gostaram = 0;
+        var nGostaram = 0;
+        var homensNgostaram = 0;
+        var mulheresNgostaram = 0;
+        var homensGostaram = 0;
+        var mulheresGostaram = 0;
+
+        for(var i=0; i<qtdEntrevistados; i++){
+            let sexo = prompt(`Informe o sexo do ${i+1}º entrevistado:`);
+            let seGostou = prompt(`O ${i+1}º entrevistado gostou ou não gostou do produto?`).toLowerCase();
+            
+            if(seGostou === 'gostou'){
+                if(sexo === 'masculino' || sexo === 'm'){
+                    ++homensGostaram;
+                }else{
+                    ++mulheresGostaram;
+                }
+                ++gostaram;
+            }else{
+                if(sexo === 'masculino' || sexo === 'm'){
+                    ++homensNgostaram;
+                }else{
+                    ++mulheresNgostaram;
+                }
+                ++nGostaram;
+            }
+        }
+
+        console.log(gostaram);
+        console.log(nGostaram);
+        console.log(homensNgostaram);
+        console.log(mulheresNgostaram);
+
+        document.getElementById('gostaram').innerHTML = `Número de entrevistados que gostaram do produto: ${gostaram}`;
+        document.getElementById('nGostaram').innerHTML = `Número de entrevistados que não gostaram do produto: ${nGostaram}`;
+        document.getElementById('masculinoN').innerHTML = `Porcentagem de pessoas do sexo masculino que não gostaram do produto: ${((homensNgostaram / qtdEntrevistados) * 100).toFixed(2)}%`;
+
+        if(mulheresNgostaram > homensNgostaram){
+            document.getElementById('maiorAceitacao').innerHTML = `A maior aceitação do produto se deu no grupo dos homens, com ${((homensGostaram / qtdEntrevistados) * 100).toFixed(2)}% de aceitação.`;
+        }else if(homensNgostaram > mulheresNgostaram){
+            document.getElementById('maiorAceitacao').innerHTML = `A maior aceitação do produto se deu no grupo das mulheres, com ${((mulheresGostaram / qtdEntrevistados) * 100).toFixed(2)}% de aceitação.`;
+        }
+    </script>
+</body>
+</html>
