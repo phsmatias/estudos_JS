@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 019</title>
+</head>
+<body>
+    <script>
+        var salarioInss = parseFloat(prompt('Informe o sálario recebido: '), 10);
+        
+        if(salarioInss <= 600){
+            alert('Isento de imposto.');
+        }else if(600 <= salarioInss && salarioInss <= 1200){
+            alert(`Desconto de ${(salarioInss * 0.2).toFixed(2)}.`);
+        }else if(1200 < salarioInss && salarioInss <= 2000){
+            alert(`Desconto de ${(salarioInss * 0.25).toFixed(2)}.`);
+        }else{
+            alert(`Desconto de ${(salarioInss * 0.3).toFixed(2)}.`);
+        }
+    </script>
+</body>
+</html>
