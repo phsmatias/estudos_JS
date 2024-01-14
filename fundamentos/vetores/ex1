@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01</title>
+</head>
+
+<body>
+    <script src="/sériesMatemáticas/jquery-3.7.1.js"></script>
+    <script>
+        /*ENUNCIADO: Desenvolva um programa que solicite a idade, o nome e o sexo de 10 pessoas e armazena esses dados em vetores. O programa deve oferecer um menu que permita ao usuário as seguintes opções:
+
+            1. Informar os dados das 10 pessoas
+
+            2. Sair
+
+        Após o usuário ter informado os dados das 10 pessoas (caso a opção 1 seja selecionada), o programa deve ofereceer as seguintes opções em um segundo menu:
+
+            1. Consultar o nome da pessoa mais nova
+
+            2. Consultar a idade do homem mais idoso
+
+            3. Consultar a média das idades das mulheres
+
+            4. Sair
+        
+        A cada consulta realizada o programa deverá apresentar novamente o menu com as opções disponíveis e só deverá ser encerrado quando o usuário escolher a opção Sair.
+        */
+
+        var escolha = parseInt(prompt('Digite e envie o número da opção que deseja fazer: 1 - Informar os dados das 10 pessoas    2 - Sair'), 10);
+
+        class Pessoa {
+            constructor(nome, idade, sexo) {
+                this.nome = nome;
+                this.idade = idade;
+                this.sexo = sexo;
+            }
+        }
+
+        var maisNova = Infinity;
+        var nomeMaisNova = "";
+        var homemIdoso = 0;
+        var nomeIdoso = "";
+        var qtdMulheres = 0;
+        var somaIdadeMulheres = 0;
+
+        if (escolha === 1) {
+            var pessoas = [];
+            for (var i = 0; i < 3; i++) {
+                var nome = prompt(`Informe o nome da ${i + 1}º pessoa:`);
+                var idade = parseInt(prompt(`Informe a idade da ${i + 1}º pessoa:`));
+                var sexo = prompt(`Informe o sexo da ${i + 1}º pessoa:`);
+                if(sexo === 'Feminino'){
+                    somaIdadeMulheres += idade;
+                    ++qtdMulheres;
+                }
+                pessoas.push(new Pessoa(nome, idade, sexo));
+            }
+        }
+
+        for (var i in pessoas) {
+            if (pessoas[i].idade < maisNova) {
+                nomeMaisNova = pessoas[i].nome;
+                maisNova = pessoas[i].idade;
+            }
+            if(pessoas[i].sexo === 'Masculino' && pessoas[i].idade > homemIdoso){
+                nomeIdoso = pessoas[i].nome;
+                homemIdoso = pessoas[i].idade;
+            }
+        }
+
+        var segundaEscolha = parseInt(prompt('O que deseja fazer agora: 1 - Consultar o nome da pessoa mais nova  2 - Consultar o nome do homem mais velho  3 - Consultar a média de idade das mulheres  4 - Sair'), 10);
+
+        if(segundaEscolha === 1){
+            alert(`A pessoa mais nova é ${nomeMaisNova} com ${maisNova} anos.`);
+        }else if(segundaEscolha === 2){
+            alert(`O homem mais velho é ${nomeIdoso} com ${homemIdoso} anos.`);
+        }else if(segundaEscolha === 3){
+            alert(`A média de idade das mulheres é de ${(somaIdadeMulheres/qtdMulheres).toFixed(2)} anos.`);
+        }else{
+            alert('Fim!');
+        }
+    </script>
+</body>
+
+</html>
