@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05</title>
+</head>
+<body>
+    <script>
+        var valor = prompt('Digite um número positivo e menor que 1000:');
+        var soma = 0;
+        for(var i in valor){
+            soma += parseInt(valor[i], 10);
+        }
+        alert(`A soma dos algarismos de ${valor} é igual a ${soma}.`);
+    </script>
+</body>
+</html>
