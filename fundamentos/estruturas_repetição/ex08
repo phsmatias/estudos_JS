@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 08</title>
+</head>
+<body>
+    <p id="numeros"></p>
+    <p id="resposta"></p>
+    <script>
+        /*Enunciado: Elabore um algoritmo que leia um número e imprima todos os números de 1 até o número lido, e também o seu produto. Exemplo
+           
+          Número: 3   Saída: 1 2 3   Produto: 6
+        */
+
+        var num = parseInt(prompt('Informe um número:'), 10);
+        var produto = 1;
+
+        for(var i=1; i<=num; i++){
+            document.getElementById('numeros').innerHTML += ` ${i} `;
+            produto *= i;
+        }
+        document.getElementById('resposta').innerHTML = produto;
+    </script>
+</body>
+</html>
