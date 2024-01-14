@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 017</title>
+</head>
+<body>
+    <script>
+        var media = parseFloat(prompt('Informe a média do aluno:'), 10);
+
+        if(media >= 6.00){
+            if(media >= 9){
+                alert('Aprovado com conceito A.');
+            }else if(media>= 7.5){
+                alert('Aprovado com conceito B.');
+            }else{
+                alert('Aprovado com conceito C');
+            }
+        }else if(media >= 4.00){
+            alert('Reprovado com conceito D.');
+        }else{
+            alert('Reprovado com conceito E.');
+        }
+    </script>
+</body>
+</html>
