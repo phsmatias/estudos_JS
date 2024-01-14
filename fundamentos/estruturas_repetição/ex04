@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+</head>
+<body>
+    <p id="resposta"></p>
+    <script>
+        //ENUNCIADO: Elabore um algoritmo que leia um número de entrada que indicará a quantidade de números a serem lidos. Em seguida, leia n números (conforme o valor informado anteriormente) e imprima o triplo de cada um.
+
+        //Pegando a quantidade de números a serem lidos
+        var qtdNumeros = parseInt(prompt('Informe quantos números seram lidos:'), 10);
+
+        //Array que vai armazenar os valores lidos
+        var num = [];
+
+        //Lendo os n números triplicados
+        for(var i = 0; i<qtdNumeros; i++){
+            var numero = parseInt(prompt(`${i + 1}º número:`), 10);
+            num.push(numero);
+        }
+
+        //Aplicando map nesse array para triplicar os números
+        const resultado = num.map(function(elemento){
+            return elemento*3;
+        });
+
+        //Exibindo a resposta
+        for(var i in resultado){
+            document.getElementById('resposta').innerHTML += ` ${resultado[i]} `
+        }
+    </script>
+</body>
+</html>
