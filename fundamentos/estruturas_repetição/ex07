@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 07</title>
+</head>
+<body>
+    <p id="resposta"></p>
+    <p id="soma"></p>
+    <script>
+        //Enunciado: Elabore um algoritmo que imprima todos os números de 100 a 200, e ao final a soma deles
+
+        var soma = 0;
+
+        for(var i = 100; i<= 200; i++){
+            document.getElementById('resposta').innerHTML += ` ${i} `;
+            soma += i;
+        }
+        document.getElementById('soma').innerHTML += `Soma de todos os números: ${soma}`;
+    </script>
+</body>
+</html>
