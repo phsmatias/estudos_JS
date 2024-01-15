@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*ENUNCIADO: Um circuito elétrico é composto de duas resistências R1 e R2 em paralelo, e ambas
+        em sequência de uma resistência R3. Faça um algoritmo para calcular a resistência equivalente
+        desse circuito*/
+
+        let r1 = Number(prompt('Informe o valor da primeira resistência:'), 10);
+        let r2 = Number(prompt('Informe o valor da segunda resistência:'), 10); 
+        let r3 = Number(prompt('Informe o valor da terceira resistência:'), 10);
+        
+        let resistenciaParcial = (r1**(-1) + r2**(-1));
+
+        let resistenciaTotal = (resistenciaParcial**(-1) + r3);
+
+        console.log(`A resistência total do circutio é de: ${resistenciaTotal}`);
+        
+    </script>
+</body>
+
+</html>
